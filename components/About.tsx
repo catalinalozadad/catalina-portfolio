@@ -154,6 +154,7 @@ className="py-20 md:py-32 px-6 md:px-12 bg-white"
   <path d="M7 17L17 7" />
   <path d="M8 7H17V16" />
 </svg>
+</a>
 
   {/* LINKEDIN */}
   <a
