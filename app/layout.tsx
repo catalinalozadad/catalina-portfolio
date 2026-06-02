@@ -13,27 +13,52 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://catalinalozada.com"),
+
   title: "Catalina Lozada | UX/UI Designer & Creative Strategist",
+
   description:
-    "Portfolio showcasing UX/UI design, digital merchandising, brand systems, email optimization, campaign strategy, and AI-powered digital experiences.",
+    "Portfolio of Catalina Lozada, Senior UX/UI Designer and Creative Strategist. Explore selected work across eCommerce, AI-powered products, CRM optimization, digital experiences, brand systems, and customer journey design.",
 
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
-   openGraph: {
+
+  openGraph: {
     title: "Catalina Lozada | UX/UI Designer & Creative Strategist",
+
     description:
-      "Selected work across eCommerce, AI products, CRM systems, and brand experiences.",
+      "Portfolio of Catalina Lozada, Senior UX/UI Designer and Creative Strategist. Explore selected work across eCommerce, AI-powered products, CRM optimization, digital experiences, brand systems, and customer journey design.",
+
+    url: "https://catalinalozada.com",
+
+    siteName: "Catalina Lozada Portfolio",
+
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://catalinalozada.com/og-image.jpg",
         width: 1200,
         height: 630,
+        alt: "Catalina Lozada Portfolio",
       },
     ],
+
+    locale: "en_CA",
+    type: "website",
   },
-}
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "Catalina Lozada | UX/UI Designer & Creative Strategist",
+
+    description:
+      "Portfolio of Catalina Lozada, Senior UX/UI Designer and Creative Strategist. Explore selected work across eCommerce, AI-powered products, CRM optimization, digital experiences, brand systems, and customer journey design.",
+
+    images: ["https://catalinalozada.com/og-image.jpg"],
+  },
+};
 
 
 export default function RootLayout({
