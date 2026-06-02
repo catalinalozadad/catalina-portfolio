@@ -65,8 +65,7 @@ export default function Hero() {
             text-[#1A1717]
           "
         >
-          Works
-        </a>
+          Projects       </a>
 
         <a
           href="#about"
@@ -156,7 +155,7 @@ export default function Hero() {
           duration-300
         "
       >
-        Works
+        Projects
       </a>
 
       <a
@@ -172,18 +171,29 @@ export default function Hero() {
         About
       </a>
 
-      <a
-        href="#journefy"
-        className="
-          font-medium
-          text-[#1A1717]
-          hover:text-[#BA94F9]
-          transition-all
-          duration-300
-        "
-      >
-        Journefy
-      </a>
+    <a
+  href="#journefy"
+  className="
+    font-medium
+    text-[#1A1717]
+    hover:text-[#BA94F9]
+    transition-all
+    duration-300
+  "
+>
+  Journe
+  <span
+    className="italic font-bold inline-block"
+    style={{
+      fontFamily: "'Playfair Display', serif",
+      fontSize: "1.25em",
+      textTransform: "none",
+      marginLeft: "-1px",
+    }}
+  >
+    fy
+  </span>
+</a>
 
       <a
         href="#footer"
@@ -403,7 +413,7 @@ export default function Hero() {
           >
 
             <p className="text-xs uppercase tracking-[0.25em] text-gray-400 mb-6">
-              UX/UI • Branding • Digital Experiences
+              Product Design • UX/UI • Digital Experiences
             </p>
 
  <h1
@@ -453,9 +463,7 @@ export default function Hero() {
 </h1>
 
             <p className="mt-8 text-[17px] text-gray-500 leading-[1.8] max-w-md">
-             Senior Product & UX/UI Designer creating thoughtful experiences across eCommerce, 
-             branding, and visual storytelling through strategic design and refined systems.
-            </p>
+Senior Product Designer and UX strategist creating intuitive digital experiences that balance user needs, business goals, and technical realities. Specializing in customer journeys, design systems, eCommerce, and scalable digital products.            </p>
 
             <motion.div
   initial={{ opacity: 0 }}
@@ -476,7 +484,7 @@ export default function Hero() {
 
   <a
     href="#selected-work"
-className="group inline-flex items-center gap-2 text-gray-500 font-normal hover:font-medium hover:gap-3 hover:text-[rgb(186,148,249)] active:opacity-60 transition-all duration-300">    Selected Works
+className="group inline-flex items-center gap-2 text-gray-500 font-normal hover:font-medium hover:gap-3 hover:text-[rgb(186,148,249)] active:opacity-60 transition-all duration-300">    Selected Projects
     <span className="text-lg transition-transform duration-300 group-hover:translate-y-1">
   ↓
 </span>

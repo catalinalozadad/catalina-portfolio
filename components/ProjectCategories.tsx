@@ -9,7 +9,7 @@ const categories = [
     number: "01",
     title: "UX/UI Design",
     description:
-      "Designing intuitive experiences rooted in strategy, systems thinking, and usability.",
+      "Designing intuitive experiences rooted in strategy and usability.",
     icon: "◫",
     color: "bg-[#E9D9FF]",
     link: "#selected-work",
@@ -17,9 +17,9 @@ const categories = [
 
   {
     number: "02",
-    title: "Brand Systems",
+    title: "Design Systems",
     description:
-      "Creating cohesive visual identities across digital, print, and campaign experiences.",
+      "Creating consistency across touchpoints through scalable design systems.",
     icon: "✦",
     color: "bg-[#FF6A21]",
     link: "#selected-work",
@@ -27,9 +27,9 @@ const categories = [
 
   {
     number: "03",
-    title: "Campaign Experience",
+    title: "Customer Journeys",
     description:
-      "Building thoughtful customer journeys through storytelling and visual direction.",
+      "Connecting touchpoints through research and human-centered design.",
     icon: "△",
     color: "bg-[#E9D9FF]",
     link: "#selected-work",
@@ -60,25 +60,24 @@ export default function ProjectCategories() {
         leading-[1.02]
         tracking-[-0.02em]
         text-[#1A1717]
-        max-w-[13ch]
+        max-w-[18ch]
       "
          style={{
   fontFamily: "'Lastik', sans-serif",
 }}
     >
-      Multidisciplinary design across digital, branding, and  <span
+      Designing connected experiences through   <span
     className="italic"
     style={{
       fontFamily: "'Playfair Display', serif",
     }}
-  >  experience systems.
-   
+  >  systems thinking.  
   </span>  
     </h2>
 
     <p className="mt-8 text-[17px] leading-[1.9] text-[#5E6472] max-w-[52ch]">
-      I combine strategic thinking with visual storytelling to create intentional experiences that connect brands with people and drive meaningful business impact.
-    </p>
+I view products, brands, and digital experiences as connected systems, designing solutions that align user needs, business goals, and long-term scalability.
+</p>
 
 <a 
   href="#selected-work"
@@ -99,7 +98,7 @@ export default function ProjectCategories() {
     duration-300
   "
 >
-  Selected Work
+  Selected Projects
 
   <span className="transition-transform duration-300 group-hover:-translate-y-1">
     ↑

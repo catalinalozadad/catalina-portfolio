@@ -75,7 +75,7 @@ export default function Footer() {
     href="#selected-work"
     className="group inline-flex items-center gap-2 font-normal hover:font-medium hover:gap-3 hover:text-[#CBB7F7] active:opacity-60 transition-all duration-300"
   >
-    Works
+    Projects
   </a>
 
   {/* ABOUT */}

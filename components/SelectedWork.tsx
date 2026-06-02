@@ -94,7 +94,7 @@ useEffect(() => {
     <div className="max-w-[1200px]">
 
       <p className="text-xs uppercase tracking-[0.25em] text-[#B470E7] mb-6">
-        Selected Work
+        Selected Projects
       </p>
 
       <h2
@@ -104,20 +104,20 @@ useEffect(() => {
           leading-[1.04]
           tracking-[-0.02em]
           text-[#1A1717]
-          max-w-[18ch]
+          max-w-[22ch]
         "
       style={{
   fontFamily: "'Lastik', sans-serif",
 }}
 
       >
-      Curated digital experiences, branding, and
+      Curated digital experiences, customer journeys, and
     <span
     className="italic"
     style={{
       fontFamily: "'Playfair Display', serif",
     }}
-  >  visual storytelling.
+  >  storytelling.
    
   </span>  
  

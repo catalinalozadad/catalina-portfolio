@@ -41,22 +41,22 @@ className="py-20 md:py-32 px-6 md:px-12 bg-white"
   <div
   className="relative w-[200px] h-[250px] shrink-0 overflow-hidden"
   style={{
-    borderRadius: "30% 40% 35% 25% / 20% 25% 35% 40%",
+    borderRadius: "78px 28px 78px 28px"
   }}
 >
     <img
-      src="/images/catalina-profile.jpg"
-      alt="Catalina Lozada"
-      className="
-        w-full
-        h-full
-        object-cover
-        object-top
-        transition-transform
-        duration-700
-        hover:scale-105
-      "
-    />
+  src="/images/catalina-profile.jpg"
+  alt="Catalina Lozada"
+  className="
+    w-full
+    h-full
+    object-cover
+    object-[center_12%]
+    transition-transform
+    duration-700
+    hover:scale-105
+  "
+/>
   </div>
 
   {/* TEXT CONTENT */}
@@ -96,8 +96,7 @@ className="py-20 md:py-32 px-6 md:px-12 bg-white"
         max-w-4xl
       "
     >
-      Translating industrial design roots into thoughtful
-      experiences across branding, UX/UI, and visual storytelling.
+      Applying industrial design thinking to connected experiences.
     </h3>
 
   </div>
@@ -111,9 +110,7 @@ className="py-20 md:py-32 px-6 md:px-12 bg-white"
 
               <p className="text-gray-500 leading-[1.8]">
 
-                For over 15 years, I’ve worked across digital experiences,
-                 brand systems, campaigns, and customer journeys balancing strategy,
-                 storytelling, and refined visual execution.
+My career began in industrial design, where I learned to understand people, solve real problems, and design with intention. From startups to enterprise organizations, I've led projects across products, brands, and customer experiences with a focus on usability, strategy, and meaningful outcomes.
               </p>
 
             </div>
@@ -122,9 +119,7 @@ className="py-20 md:py-32 px-6 md:px-12 bg-white"
 
               <p className="text-gray-500 leading-[1.8]">
 
-                My approach blends systems thinking with aesthetics to
-                create experiences that feel intentional, scalable, 
-                and human-centered across digital and physical touchpoints.
+                Over the past 15 years, I've evolved that foundation across digital experiences, UX, and product design. Expanding my understanding of development and implementation helped me bridge the gap between strategy and execution, strengthening my ability to design scalable systems that balance user needs, business goals, and technical realities.
 
               </p>
 
@@ -184,7 +179,7 @@ className="py-20 md:py-32 px-6 md:px-12 bg-white"
     href="#selected-work"
     className="group inline-flex items-center gap-2 text-gray-500 font-normal hover:font-medium hover:gap-3 hover:text-[#CBB7F7] active:opacity-60 transition-all duration-300"
   >
-    Selected Work
+    Selected Projects
 
     <span className="text-lg transition-transform duration-300 group-hover:-translate-y-1">
       ↑
