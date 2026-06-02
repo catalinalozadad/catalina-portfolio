@@ -142,10 +142,18 @@ className="py-20 md:py-32 px-6 md:px-12 bg-white"
   >
     Contact me
 
-    <span className="text-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
-      ↗
-    </span>
-  </a>
+   <svg
+  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M7 17L17 7" />
+  <path d="M8 7H17V16" />
+</svg>
 
   {/* LINKEDIN */}
   <a
@@ -156,9 +164,18 @@ className="py-20 md:py-32 px-6 md:px-12 bg-white"
   >
     LinkedIn
 
-    <span className="text-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
-      ↗
-    </span>
+ <svg
+  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M7 17L17 7" />
+  <path d="M8 7H17V16" />
+</svg>
   </a>
 
   {/* SELECTED WORK */}

@@ -30,7 +30,7 @@ const categories = [
     title: "Campaign Experience",
     description:
       "Building thoughtful customer journeys through storytelling and visual direction.",
-    icon: "↗",
+    icon: "△",
     color: "bg-[#E9D9FF]",
     link: "#selected-work",
   },

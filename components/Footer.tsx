@@ -95,9 +95,18 @@ export default function Footer() {
   >
     Get in touch
 
-    <span className="text-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#CBB7F7]">
-      ↗
-    </span>
+    <svg
+  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M7 17L17 7" />
+  <path d="M8 7H17V16" />
+</svg>
   </a>
 
   {/* LINKEDIN */}
@@ -109,9 +118,18 @@ export default function Footer() {
   >
     LinkedIn
 
-    <span className="text-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#CBB7F7]">
-      ↗
-    </span>
+  <svg
+  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M7 17L17 7" />
+  <path d="M8 7H17V16" />
+</svg>
   </a>
 
 </div>
