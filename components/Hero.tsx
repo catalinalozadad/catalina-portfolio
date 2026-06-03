@@ -451,7 +451,8 @@ export default function Hero() {
 
   <span
     style={{
-      fontFamily: "'Lastik', sans-serif",
+      fontFamily: "Inter, sans-serif",
+      letterSpacing: "-0.08em",
     }}
   >
     thoughtful
@@ -462,7 +463,8 @@ export default function Hero() {
   <span
     className="text-[#BDB8B4]"
     style={{
-      fontFamily: "'Lastik', sans-serif",
+      fontFamily: "Inter, sans-serif",
+      letterSpacing: "-0.08em",
     }}
   >
     experiences

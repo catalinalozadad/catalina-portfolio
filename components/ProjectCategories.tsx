@@ -63,7 +63,8 @@ export default function ProjectCategories() {
         max-w-[18ch]
       "
          style={{
-  fontFamily: "'Lastik', sans-serif",
+  fontFamily: "Inter, sans-serif",
+      letterSpacing: "-0.08em",
 }}
     >
       Designing connected experiences through   <span

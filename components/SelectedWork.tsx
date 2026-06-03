@@ -104,10 +104,11 @@ useEffect(() => {
           leading-[1.04]
           tracking-[-0.02em]
           text-[#1A1717]
-          max-w-[22ch]
+          max-w-[18ch]
         "
       style={{
-  fontFamily: "'Lastik', sans-serif",
+ fontFamily: "Inter, sans-serif",
+      letterSpacing: "-0.08em",
 }}
 
       >
