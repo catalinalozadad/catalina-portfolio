@@ -38,7 +38,7 @@ const projects = [
 
   {
     title: "AI Product Design",
-    subtitle: "Creative Direction • UX/UI Design • Prototyping",
+    subtitle: "UX/UI Design • Prototyping",
     brand: "Outkome Catalyst",
     image: "/images/work-5.jpg",
     link: "#",
@@ -46,7 +46,7 @@ const projects = [
 
   {
     title: "Meta Ads Strategy",
-    subtitle: "Creative Direction • Paid Media",
+    subtitle: "Creative Strategy • Paid Media",
     brand: "Prodigy Wildfire Solutions",
     image: "/images/work-6.jpg",
     link: "#",
@@ -99,7 +99,7 @@ useEffect(() => {
 
       <h2
         className="
-          text-[42px]
+          text-[40px]
           md:text-[58px]
           leading-[1.04]
           tracking-[-0.02em]
@@ -117,7 +117,7 @@ useEffect(() => {
     style={{
       fontFamily: "'Playfair Display', serif",
     }}
-  >  storytelling.
+  > human insight.
    
   </span>  
  
@@ -170,7 +170,27 @@ useEffect(() => {
 
           {/* TRACK */}
           <motion.div
-            animate={{
+  drag="x"
+  dragConstraints={{ left: 0, right: 0 }}
+  dragElastic={0.08}
+  whileTap={{ cursor: "grabbing" }}
+
+  onDragEnd={(event, info) => {
+    const threshold = 100
+
+    if (
+      info.offset.x < -threshold &&
+      current < (isDesktop ? projects.length - 3 : projects.length - 2)
+    ) {
+      setCurrent(current + 1)
+    }
+
+    if (info.offset.x > threshold && current > 0) {
+      setCurrent(current - 1)
+    }
+  }}
+
+  animate={{
               x: isDesktop
   ? `-${Math.min(current, projects.length - 3) * 33.5}%`
   : `-${Math.min(current, projects.length - 2) * 51}%`,
@@ -179,14 +199,14 @@ useEffect(() => {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="flex gap-6"
+            className="flex gap-6 cursor-grab"
           >
 
             {projects.map((project, index) => (
               <a
                 key={index}
                 href={project.link}
-                className="w-[85vw] md:w-[calc(50%-12px)] xl:w-[calc(33.333%-16px)] flex-shrink-0 flex-shrink-0 flex-shrink-0 group"
+                className="w-[85vw] md:w-[calc(50%-12px)] xl:w-[calc(32%-16px)] flex-shrink-0 flex-shrink-0 flex-shrink-0 group"
               >
 
                 {/* CARD */}
@@ -203,7 +223,7 @@ useEffect(() => {
 >
 
                   {/* IMAGE */}
-                  <div className="relative aspect-square overflow-hidden">
+                  <div className="relative aspect-[1/0.88] overflow-hidden">
 
                     <img
                       src={project.image}
@@ -262,10 +282,29 @@ useEffect(() => {
               </a>
             ))}
 
+
           </motion.div>
 
-          {/* DOTS */}
-<div className="w-full flex justify-center items-center gap-2 mt-10">
+          
+
+          {/* NAVIGATION HINT + DOTS */}
+<div className="w-full flex flex-col items-center mt-10">
+
+  <p
+    className="
+      text-[11px]
+      uppercase
+      tracking-[0.22em]
+      text-[#AAAAA9]
+      mb-4
+    "
+  >
+   Explore projects <span className="ml-1 inline-block animate-pulse">
+  →
+</span>
+  </p>
+
+  <div className="flex justify-center items-center gap-2">
 
   {projects
   .slice(0, isDesktop ? projects.length - 2 : projects.length - 1)
@@ -287,6 +326,7 @@ useEffect(() => {
         </div>
 
       </div>
+         </div>
 
       {/* MOBILE STACK */}
 <div className="md:hidden flex flex-col gap-6 mt-10">
@@ -307,8 +347,7 @@ useEffect(() => {
       <div className="bg-[#f7f7f5] rounded-3xl overflow-hidden">
 
         {/* IMAGE */}
-        <div className="relative aspect-square overflow-hidden">
-
+<div className="relative aspect-[1/0.88] overflow-hidden">
           <img
             src={project.image}
             alt={project.title}

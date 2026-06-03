@@ -62,7 +62,7 @@ export default function Hero() {
             uppercase
             tracking-[0.14em]
             text-[13px]
-            text-[#1A1717]
+            text-[#171414]
           "
         >
           Projects       </a>
@@ -74,7 +74,7 @@ export default function Hero() {
             uppercase
             tracking-[0.14em]
             text-[13px]
-            text-[#1A1717]
+            text-[#171414]
           "
         >
           About
@@ -87,10 +87,21 @@ export default function Hero() {
             uppercase
             tracking-[0.14em]
             text-[13px]
-            text-[#1A1717]
+            text-[#171414]
           "
         >
-          Journefy
+          Journe
+           <span
+    className="italic font-bold inline-block"
+    style={{
+      fontFamily: "'Playfair Display', serif",
+      fontSize: "1.25em",
+      textTransform: "none",
+      marginLeft: "-1px",
+    }}
+  >
+    fy
+  </span>
         </a>
 
         <a
