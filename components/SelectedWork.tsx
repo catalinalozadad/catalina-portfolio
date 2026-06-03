@@ -1,4 +1,4 @@
-"use client"
+"use client" 
 
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
@@ -168,7 +168,71 @@ useEffect(() => {
 
         {/* RIGHT SIDE */}
         <div className="relative overflow-hidden hidden md:block">
+ {/* LEFT ARROW */}
+  {current > 0 && (
+    <button
+      onClick={() => setCurrent(current - 1)}
+      className="
+        absolute
+        left-[-15px]
+        top-[35%]
+        -translate-y-1/2
+        z-20
+        w-12
+        h-20
+        rounded-r-2xl
+        bg-[#F7F4FF]/90
+        backdrop-blur-sm
+        text-[#AAAAA9]
+        text-4xl
+        flex
+        items-center
+        justify-center
+        shadow-sm
+        hover:bg-white
+        transition-all
+        duration-300
+      "
+    >
+      ‹
+    </button>
+  )}
 
+  {/* RIGHT ARROW */}
+  {current < projects.length - 3 && (
+    <button
+      onClick={() =>
+        setCurrent(
+          Math.min(current + 1, projects.length - 3)
+        )
+      }
+      className="
+        absolute
+        right-[-15px]
+        top-[35%]
+        -translate-y-1/2
+        z-20
+        w-12
+        h-20
+        rounded-l-2xl
+        bg-[#F7F4FF]/90
+        backdrop-blur-sm
+        text-[#AAAAA9]
+        text-4xl
+        flex
+        items-center
+        justify-center
+        shadow-sm
+        hover:bg-white
+        transition-all
+        duration-300
+      "
+    >
+      ›
+    </button>
+  )}
+
+  {/* TRACK */}
           {/* TRACK */}
           <motion.div
   drag="x"
@@ -207,7 +271,7 @@ useEffect(() => {
               <a
                 key={index}
                 href={project.link}
-                className="w-[85vw] md:w-[calc(50%-12px)] xl:w-[calc(32%-16px)] flex-shrink-0 flex-shrink-0 flex-shrink-0 group"
+                className="w-[85vw] md:w-[calc(50%-12px)] xl:w-[30.5%] flex-shrink-0 flex-shrink-0 flex-shrink-0 group"
               >
 
                 {/* CARD */}
@@ -238,13 +302,13 @@ useEffect(() => {
                   </div>
 
                   {/* CONTENT */}
-                  <div className="p-6">
+                  <div className="p-5">
 
                     <h3 className="text-2xl font-semibold tracking-tight mb-2">
                       {project.title}
                     </h3>
 
-                    <p className="text-gray-500 mb-6">
+                    <p className="text-gray-500 mb-4">
                       {project.subtitle}
                     </p>
 
