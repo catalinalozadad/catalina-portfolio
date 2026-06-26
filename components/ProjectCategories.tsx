@@ -70,7 +70,7 @@ export default function ProjectCategories() {
       Designing connected experiences through   <span
     className="italic"
     style={{
-      fontFamily: "'Playfair Display', serif",
+      fontFamily: "'Playfair Display', serif", letterSpacing: "-0.02em",
     }}
   >  systems thinking.  
   </span>  

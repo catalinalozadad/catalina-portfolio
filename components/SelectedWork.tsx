@@ -2,54 +2,101 @@
 
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
+import ProjectPreviewModal from "@/components/ProjectPreviewModal";
+import { useRouter } from "next/navigation";
 
 const projects = [
   {
     title: "Curated Commerce",
-    subtitle: "UX/UI • eCommerce Optimization",
+    subtitle: "UX/UI • eCommerce Optimization • Conversion",
     brand: "Urban Barn",
     image: "/images/work-1.jpg",
-    link: "#",
+description:"Redesigning the product listing experience through a new grid system and swipeable product imagery to reduce friction, improve product discovery, and increase conversion.",    slug: "curated-commerce",
+    previewImages: [
+  "/projects/ecommerce/1.webp",
+  "/projects/ecommerce/2.gif",
+  "/projects/ecommerce/3.webp",
+  "/projects/ecommerce/4.gif",
+  "/projects/ecommerce/5.webp",
+  "/projects/ecommerce/6.gif",]
   },
 
   {
     title: "Customer Journeys",
-    subtitle: "Storytelling • Strategy • Revenue Optimization",
+    subtitle: "Storytelling • Content Strategy • Product Discovery",
     brand: "Urban Barn",
     image: "/images/work-2.jpg",
-    link: "#",
+    description: "Designing a scalable ecosystem of homepage experiences, landing pages, and seasonal campaigns that improved product discovery and created more engaging customer journeys across the site.",
+     slug: "customer-journeys",
+      previewImages: [
+  "/projects/customer-journeys/1.webp",
+  "/projects/customer-journeys/2.webp",
+  "/projects/customer-journeys/3.gif",
+  "/projects/customer-journeys/4.gif",
+  "/projects/customer-journeys/5.webp",
+  "/projects/customer-journeys/6.webp",]
   },
+
 
   {
     title: "Brand Systems",
-    subtitle: "Art Direction • Web • Email • App Launch",
+    subtitle: "Art Direction • Web • Product Launches",
     brand: "Prodigy Wildfire Solutions",
+    description:"Building cohesive digital systems across web, email, and product experiences to strengthen brand consistency.",
     image: "/images/work-3.jpg",
-    link: "#",
+    slug: "brand-systems",
+    comingSoon: true,
+    previewImages: [
+  "/projects/brand-systems/1.webp",
+  "/projects/brand-systems/2.gif",
+  "/projects/brand-systems/3.webp",
+  "/projects/brand-systems/4.webp",]
   },
 
   {
     title: "Email Evolution",
     subtitle: "Lifecycle Design • CRM Systems • Strategy",
     brand: "Urban Barn",
+    description: "Reimagining email experiences through modular design systems and customer-centered storytelling.",
     image: "/images/work-4.jpg",
-    link: "#",
+    slug: "email-evolution",
+    comingSoon: true,
+    previewImages: [
+  "/projects/email/1.webp",
+  "/projects/email/2.webp",
+  "/projects/email/3.webp",
+  "/projects/email/4.webp",]
   },
 
   {
     title: "AI Product Design",
     subtitle: "UX/UI Design • Prototyping",
     brand: "Outkome Catalyst",
+    description:"Exploring AI-powered products through rapid experimentation, interaction design, and product thinking.",
     image: "/images/work-5.jpg",
-    link: "#",
+    slug: "ai-product-design",
+    comingSoon: true,
+    previewImages: [
+  "/projects/ai/1.webp",
+  "/projects/ai/2.webp",]
   },
 
   {
     title: "Meta Ads Strategy",
     subtitle: "Creative Strategy • Paid Media",
     brand: "Prodigy Wildfire Solutions",
+    description: "Crafting high-performing campaign concepts and digital assets that blend storytelling with measurable results.",
     image: "/images/work-6.jpg",
-    link: "#",
+    slug: "meta-ads-strategy",
+    comingSoon: true,
+    previewImages: [
+  "/projects/ads/1.webp",
+  "/projects/ads/2.webp",
+  "/projects/ads/3.webp",
+  "/projects/ads/4.webp",
+  "/projects/ads/5.webp",
+   "/projects/ads/6.webp",
+]
   },
 
   
@@ -59,6 +106,9 @@ export default function SelectedWork() {
   const [current, setCurrent] = useState(0)
   const [direction, setDirection] = useState(1)
   const [isDesktop, setIsDesktop] = useState(false)
+  const [selectedProject, setSelectedProject] =
+  useState<(typeof projects)[0] | null>(null);
+  const router = useRouter();
 useEffect(() => {
 
   const handleResize = () => {
@@ -116,7 +166,7 @@ useEffect(() => {
     <span
     className="italic"
     style={{
-      fontFamily: "'Playfair Display', serif",
+      fontFamily: "'Playfair Display', serif", letterSpacing: "-0.02em",
     }}
   > human insight.
    
@@ -268,11 +318,18 @@ useEffect(() => {
           >
 
             {projects.map((project, index) => (
-              <a
-                key={index}
-                href={project.link}
-                className="w-[85vw] md:w-[calc(50%-12px)] xl:w-[30.5%] flex-shrink-0 flex-shrink-0 flex-shrink-0 group"
-              >
+            <button
+   key={index}
+  onClick={() => setSelectedProject(project)}
+  className="
+    w-[85vw]
+    md:w-[calc(50%-12px)]
+    xl:w-[30.5%]
+    flex-shrink-0
+    text-left
+    group
+  "
+>
 
                 {/* CARD */}
                 <div
@@ -344,7 +401,7 @@ useEffect(() => {
 
                 </div>
 
-              </a>
+              </button>
             ))}
 
 
@@ -398,16 +455,25 @@ useEffect(() => {
 
   {projects.map((project, index) => (
 
-    <a
-      key={index}
-      href={project.link}
-      className="
-  group
-  transition-all
-  duration-700
-  active:scale-[0.98]
-"
-    >
+   <button
+  key={index}
+onClick={() => {
+  if (project.slug === "customer-journeys") {
+    router.push("/customer-journeys");
+    return;
+  }
+
+  setSelectedProject(project);
+}}
+  className="
+    w-[85vw]
+    md:w-[calc(50%-12px)]
+    xl:w-[30.5%]
+    flex-shrink-0
+    text-left
+    group
+  "
+>
 
       <div className="bg-[#f7f7f5] rounded-3xl overflow-hidden">
 
@@ -476,12 +542,16 @@ useEffect(() => {
 
       </div>
 
-    </a>
+    </button>
 
   ))}
 
 </div>
 
+<ProjectPreviewModal
+  project={selectedProject}
+  onClose={() => setSelectedProject(null)}
+/>
     </section>
   )
 }

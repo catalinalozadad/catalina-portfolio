@@ -53,7 +53,15 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
 
           {/* NAME */}
-          <div className="flex items-center gap-3">
+          <button
+  onClick={() =>
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
+  className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity"
+>
 
     <img
     src="images/footer-icon.png"
@@ -65,7 +73,7 @@ export default function Footer() {
     Catalina Lozada
   </div>
 
-</div>
+</button>
 
           {/* NAV */}
 <div className="flex flex-wrap gap-x-8 gap-y-4 text-[15px] text-white/60">
