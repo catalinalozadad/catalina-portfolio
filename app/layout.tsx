@@ -1,5 +1,7 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,14 +29,10 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Catalina Lozada | UX/UI Designer & Creative Strategist",
-
     description:
       "Portfolio of Catalina Lozada, Senior UX/UI Designer and Creative Strategist. Explore selected work across eCommerce, AI-powered products, CRM optimization, digital experiences, brand systems, and customer journey design.",
-
     url: "https://catalinalozada.com",
-
     siteName: "Catalina Lozada Portfolio",
-
     images: [
       {
         url: "https://catalinalozada.com/og-image.jpg",
@@ -43,23 +41,18 @@ export const metadata: Metadata = {
         alt: "Catalina Lozada Portfolio",
       },
     ],
-
     locale: "en_CA",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-
     title: "Catalina Lozada | UX/UI Designer & Creative Strategist",
-
     description:
       "Portfolio of Catalina Lozada, Senior UX/UI Designer and Creative Strategist. Explore selected work across eCommerce, AI-powered products, CRM optimization, digital experiences, brand systems, and customer journey design.",
-
     images: ["https://catalinalozada.com/og-image.jpg"],
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -71,7 +64,25 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-LY50RCKCT6"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-LY50RCKCT6');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }

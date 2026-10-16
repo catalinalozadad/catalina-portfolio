@@ -80,18 +80,22 @@ export default function Navbar() {
             text-[#171414]
           "
         >
-          Journe
-           <span
-    className="italic font-bold inline-block"
-    style={{
-      fontFamily: "'Playfair Display', serif",
-      fontSize: "1.25em",
-      textTransform: "none",
-      marginLeft: "-1px",
-    }}
-  >
-    fy
-  </span>
+         <span className="font-sans tracking-[0.02em]">
+  Journe
+ <span
+  className="italic normal-case font-normal inline-block"
+  style={{
+    fontFamily: "Georgia, serif",
+    fontSize: "1.5em",
+    marginLeft: "2px",
+    fontStyle: "italic",
+    fontWeight: 400,
+    textTransform: "none",
+  }}
+>
+  fy
+</span>
+</span>
         </a>
 
         <a
@@ -183,17 +187,19 @@ export default function Navbar() {
   "
 >
   Journe
-  <span
-    className="italic font-bold inline-block"
-    style={{
-      fontFamily: "'Playfair Display', serif",
-      fontSize: "1.25em",
-      textTransform: "none",
-      marginLeft: "-1px",
-    }}
-  >
-    fy
-  </span>
+<span
+  className="italic normal-case font-normal inline-block"
+  style={{
+    fontFamily: "Georgia, serif",
+    fontSize: "1.5em",
+    marginLeft: "1px",
+    fontStyle: "italic",
+    fontWeight: 400,
+    textTransform: "none",
+  }}
+>
+  fy
+</span>
 </a>
 
       <a
